@@ -7,15 +7,16 @@
 3. Enter threshold and press Enter.
 4. Enter DONE to stop the checking process.
 
-----
+---
 
 >LOAD CUSTOM DATASETS INTO PROGRAMS
 > 1. open main.py source file,
 > 2. in driver code...
 >> change the value of path to your custom dataset file in Dataset folder. "Dataset must be in txt format".
 
+---
 
->Note:
-> * Preprocessing the data takes sometime as generally the datasets are huge in number.
-> * You will need NLTK package, Numpy package for successful compilation.
-> * Following python modules are required :- pandas, numpy, pickle
+### Note:
+ * Preprocessing the data takes sometime as generally the datasets are huge in number.
+ * You will need NLTK package, Numpy package for successful compilation.
+ * Following python modules are required :- pandas, numpy, pickle
