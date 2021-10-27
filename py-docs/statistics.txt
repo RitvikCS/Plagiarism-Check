@@ -1,0 +1,103 @@
+Help on module statistics:
+
+NAME
+    statistics - Various metrics which are required to evaluate LSH.
+
+FUNCTIONS
+    compute_similarity(x, similar_documents, signature_matrix, sim_type='jaccard')
+        Calculates the  cosine similarity between two documents
+        
+        Parameters
+        ----------
+        x: 1-d signature array of document with docid=x (int)
+        similar_documents: a list of docids which are similar to x.
+        signature_matrix: stores signature vectors of all documents as columns (pandas.DataFrame)
+        sim_type: Possible values jaccard, euclid, cosine (Default = jaccard) 
+        
+        Returns
+        -------
+        list : sorted list of (docid, score) tuples.
+    
+    cosine(x, a, signature_matrix)
+        Calculates the cosine similarity between two documents
+        
+        Parameters
+        ----------
+        x: 1-d signature array of document with docid=x (int)
+        a: 1-d signature array of document with docid=a (int)
+        signature_matrix: stores signature vectors of all documents as columns (pandas.DataFrame)
+        
+        Returns
+        -------
+        the value ofcosine similarity between documents x and a
+    
+    euclid(x, a, signature_matrix)
+        Calculates the euclidean similarity between two documents
+        
+        Parameters
+        ----------
+        x: 1-d signature array of document with docid=x (int)
+        a: 1-d signature array of document with docid=a (int)
+        signature_matrix: stores signature vectors of all documents as columns (pandas.DataFrame)
+        
+        Returns
+        -------
+        the value of euclidean distance between documents x and a
+    
+    get_name_of_file(file_path, files)
+        Calculates the  cosine similarity between two documents
+        
+        Parameters
+        ----------
+        threshold: value of similarity above which retrieved docs are considered relevant(float)
+        files: list of tuples containing filename and file id.
+        
+        Returns
+        -------
+        returns name of the file with given file_path.
+    
+    jaccard(x, a, signature_matrix)
+        Calculates the Jaccard similarity between two documents
+        
+        Parameters
+        ----------
+        x: 1-d signature array of document with docid=x (int)
+        a: 1-d signature array of document with docid=a (int)
+        signature_matrix: stores signature vectors of all documents as columns (pandas.DataFrame)
+        
+        Returns
+        -------
+        the value of Jaccard similarity between documents x and a
+    
+    precision(threshold, output)
+        Calculates the cosine similarity between two documents
+        
+        Parameters
+        ----------
+        threshold: value of similarity above which retrieved docs are considered relevant (float)
+        output:  list of retrieved items.
+        
+        Returns
+        -------
+        precision value for the given set of retrieved items.(float)
+    
+    recall(threshold, x, size, output, signature_matrix, sim_type)
+        Calculates the  cosine similarity between two documents
+        
+        Parameters
+        ----------
+        threshold: value of similarity above which retrieved docs are considered relevant (float)
+        x: 1-d signature array of document with docid=x (int)
+        size: number of all documents in the corpus (int)
+        output: list of retrieved items.
+        signature_matrix: stores signature vectors of all documents as columns (pandas.DataFrame)
+        sim_type: Possible values jaccard, euclid, cosine (str) 
+        
+        Returns
+        -------
+        returns recall value for the given set of retrieved items.
+
+FILE
+    c:\users\admin\downloads\statistics.py
+
+

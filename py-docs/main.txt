@@ -1,0 +1,24 @@
+Help on module main:
+
+NAME
+    main - The project aims for plagiarism detection using Locality Sensitive Hahsing(LSH)
+
+DESCRIPTION
+    Process:
+        - Shingling :- Changing documents into set of tokens.Any substring of length 
+        of k can be called a k-shingle.Here we generate a sparse incidence matrix.
+        - Minhashing :- In the last step we got incidence matrix which is sparse so 
+        here we target to reduce the size of matrix by producing signature for each
+        document present in the incidence matrix
+        - LSH :- Here we divide the signature matrix into horizontal bands and applying hash
+        functions.We use a hash function  for hashing every band and while hashing a band,its 
+        parts of each document are hashed into a set of buckets.So documents 
+        with the same signature  in the band will land into the same buckets
+
+FUNCTIONS
+    startLSH()
+
+FILE
+    c:\users\admin\downloads\main.py
+
+

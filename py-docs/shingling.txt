@@ -1,0 +1,46 @@
+Help on module shingling:
+
+NAME
+    shingling - Generate the incidence matrix for corpus by using Shingling
+
+FUNCTIONS
+    build_matrix(files, k=4, newline=False)
+        helper: build incidence matrix for k-grams (shingles)
+    
+    get_shingle_matrix(folderpath, shingle_size=8, extension='.txt')
+        Does Shingling and builds incidence index for shingles. Please note that if 
+        a already generated pickle is present in the folder then this function automatically loads
+        
+        Parameters
+        ----------
+        folderpath: The path to corpus files (str)
+        shingle_size: Size of shingles for dividing the documents.(Default is  8)
+        extension: The extension of the files to be read. (Default: .txt)
+        
+        Returns
+        -------
+        pandas.Dataframe : dataframe containing rows as shingles and cols as doc_ids
+    
+    list_all_files(folderpath, extension='.txt')
+        Build the corpus files list from the folder path given.
+        
+        Parameters
+        ----------
+        folderpath: The path to corpus files(str)
+        extension:  The extension of the files to be read. (Default: .txt)
+        
+        Returns
+        -------
+        list : a list of files present in the directory(includes sub-folders)
+        
+        Raises
+        ------
+        Exception
+            if given folder path does not exist
+    
+    main()
+
+FILE
+    c:\users\admin\downloads\shingling.py
+
+

@@ -1,0 +1,38 @@
+Help on module minhashing:
+
+NAME
+    minhashing
+
+DESCRIPTION
+    In this we calculate the signature of each document using minhashing 
+    technique by utilizing a number of hash functions
+
+FUNCTIONS
+    gen_hash_func(rows, no_of_hash_functions=200)
+        This function creates parameters for given no of hash functions
+        
+        Parameters
+        ----------
+        rows: Number of rows in shingle matrix (int)
+        no_of_hash_functions: Number of hash functions to generate for minhashing (Default: 200)
+        
+        Returns
+        -------
+        list : list of functions which can be used as hashes[i](x)
+    
+    generate_signature_matrix(inci_mat, no_of_hash_functions=200)
+        It generates the signature matrix for whole corpus
+        
+        Parameters
+        ----------
+        inci_mat: incidence index generated after shingling of similar process(pandas.DataFrame)
+        no_of_hash_functions: numner of hash functions to be used in generating signatures for documents.(Default: 100)
+        
+        Returns
+        -------
+        returns dataframe containing signatures of every document
+
+FILE
+    c:\users\admin\downloads\minhashing.py
+
+
